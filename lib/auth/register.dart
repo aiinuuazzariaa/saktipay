@@ -212,8 +212,9 @@ class _RegisterState extends State<Register> {
                       label: const Text(
                         'Google',
                         style: TextStyle(
-                          color: Colors.black,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
+                          color: Colors.black,
                         ),
                       ),
                       style: OutlinedButton.styleFrom(
