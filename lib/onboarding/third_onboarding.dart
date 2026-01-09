@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:saktipay/onboarding/third_onboarding.dart';
+import 'package:saktipay/auth/register.dart';
 
 class ThirdOnBoarding extends StatelessWidget {
   const ThirdOnBoarding({super.key});
@@ -21,9 +21,7 @@ class ThirdOnBoarding extends StatelessWidget {
                   onTap: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(
-                        builder: (_) => const ThirdOnBoarding(),
-                      ),
+                      MaterialPageRoute(builder: (_) => const Register()),
                     );
                   },
                   child: Text(
@@ -88,9 +86,7 @@ class ThirdOnBoarding extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(
-                        builder: (_) => const ThirdOnBoarding(),
-                      ),
+                      MaterialPageRoute(builder: (_) => const Register()),
                     );
                   },
                   child: const Text(
