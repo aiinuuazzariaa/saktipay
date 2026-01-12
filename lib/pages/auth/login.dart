@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:saktipay/auth/login.dart';
+import 'package:saktipay/pages/index.dart';
 
-class Register extends StatefulWidget {
-  const Register({super.key});
+class Login extends StatefulWidget {
+  const Login({super.key});
 
   @override
-  State<Register> createState() => _RegisterState();
+  State<Login> createState() => _LoginState();
 }
 
-class _RegisterState extends State<Register> {
+class _LoginState extends State<Login> {
   bool obscurePassword = true;
   bool obscureConfirm = true;
 
@@ -24,7 +24,7 @@ class _RegisterState extends State<Register> {
             right: 0,
             child: SafeArea(
               child: Center(
-                child: Image.asset('assets/img/logo.png', width: 230),
+                child: Image.asset('assets/img/logo_white.png', width: 230),
               ),
             ),
           ),
@@ -32,6 +32,7 @@ class _RegisterState extends State<Register> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
+              height: MediaQuery.of(context).size.height * 0.75,
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
               decoration: const BoxDecoration(
                 color: Colors.white,
@@ -42,7 +43,7 @@ class _RegisterState extends State<Register> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const Text(
-                      'Daftar',
+                      'Masuk',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 30,
@@ -54,10 +55,10 @@ class _RegisterState extends State<Register> {
                     const SizedBox(height: 16),
 
                     Text(
-                      'Daftar sekarang dan mulai gunakan SaktiPay untuk bisnismu.',
+                      'Kelola transaksi dan penjualan dengan lebih praktis.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 18,
                         color: Colors.black.withOpacity(0.75),
                       ),
                     ),
@@ -66,7 +67,7 @@ class _RegisterState extends State<Register> {
 
                     Text(
                       'Email',
-                      style: TextStyle(fontSize: 16, color: Colors.black),
+                      style: TextStyle(fontSize: 18, color: Colors.black),
                     ),
                     const SizedBox(height: 8),
                     TextField(
@@ -89,7 +90,7 @@ class _RegisterState extends State<Register> {
 
                     Text(
                       'Kata Sandi',
-                      style: TextStyle(fontSize: 16, color: Colors.black),
+                      style: TextStyle(fontSize: 18, color: Colors.black),
                     ),
                     const SizedBox(height: 8),
                     TextField(
@@ -126,45 +127,6 @@ class _RegisterState extends State<Register> {
 
                     const SizedBox(height: 20),
 
-                    Text(
-                      'Konfirmasi Sandi',
-                      style: TextStyle(fontSize: 16, color: Colors.black),
-                    ),
-                    const SizedBox(height: 8),
-                    TextField(
-                      obscureText: obscureConfirm,
-                      decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.black.withOpacity(0.25),
-                          ),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        hintText: 'Konfirmasi Sandi',
-                        suffixIcon: IconButton(
-                          icon: Icon(
-                            obscureConfirm
-                                ? Icons.visibility_off
-                                : Icons.visibility,
-                          ),
-                          onPressed: () {
-                            setState(() {
-                              obscureConfirm = !obscureConfirm;
-                            });
-                          },
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                    ),
-
-                    const SizedBox(height: 20),
-
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
@@ -178,11 +140,11 @@ class _RegisterState extends State<Register> {
                         onPressed: () {
                           Navigator.pushReplacement(
                             context,
-                            MaterialPageRoute(builder: (_) => const Login()),
+                            MaterialPageRoute(builder: (_) => const Index()),
                           );
                         },
                         child: const Text(
-                          'Daftar',
+                          'Masuk',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -225,6 +187,7 @@ class _RegisterState extends State<Register> {
                         ),
                       ),
                     ),
+
                     const SizedBox(height: 40),
                   ],
                 ),

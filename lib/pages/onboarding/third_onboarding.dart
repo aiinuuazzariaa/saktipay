@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:saktipay/onboarding/second_onboarding.dart';
+import 'package:saktipay/pages/auth/register.dart';
 
-class FirstOnBoarding extends StatelessWidget {
-  const FirstOnBoarding({super.key});
+class ThirdOnBoarding extends StatelessWidget {
+  const ThirdOnBoarding({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +21,12 @@ class FirstOnBoarding extends StatelessWidget {
                   onTap: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(
-                        builder: (_) => const SecondOnBoarding(),
-                      ),
+                      MaterialPageRoute(builder: (_) => const Register()),
                     );
                   },
                   child: Text(
                     'Lewati',
-                    style: TextStyle(fontSize: 16, color: Color(0xFFA4A4A4)),
+                    style: TextStyle(fontSize: 18, color: Color(0xFFA4A4A4)),
                   ),
                 ),
               ),
@@ -37,7 +35,7 @@ class FirstOnBoarding extends StatelessWidget {
             const Spacer(),
 
             Image.asset(
-              'assets/img/undraw_report.png',
+              'assets/img/undraw_mobile_encryption.png',
               width: 300,
               height: 200,
             ),
@@ -47,7 +45,7 @@ class FirstOnBoarding extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 38),
               child: Text(
-                'Gak Perlu Ribet Rekap Data',
+                'Data Tersimpan Aman Tentram Jaya!',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 30,
@@ -62,10 +60,10 @@ class FirstOnBoarding extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 50),
               child: Text(
-                'Pantau penjualanmu dengan cepat dan mudah.',
+                'Nikmati proses transaksi yang lancar tanpa lemot.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
                   color: Colors.black.withOpacity(0.75),
                 ),
               ),
@@ -79,7 +77,7 @@ class FirstOnBoarding extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black,
+                    backgroundColor: Color(0xFFF9B42A),
                     padding: const EdgeInsets.symmetric(vertical: 14),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(6),
@@ -88,17 +86,15 @@ class FirstOnBoarding extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(
-                        builder: (_) => const SecondOnBoarding(),
-                      ),
+                      MaterialPageRoute(builder: (_) => const Register()),
                     );
                   },
                   child: const Text(
-                    'Lanjut',
+                    'Jelajahi Sekarang 🚀',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                 ),

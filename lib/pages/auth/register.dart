@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:saktipay/pages/auth/login.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class Register extends StatefulWidget {
+  const Register({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _LoginState extends State<Login> {
+class _RegisterState extends State<Register> {
   bool obscurePassword = true;
   bool obscureConfirm = true;
 
@@ -23,7 +24,7 @@ class _LoginState extends State<Login> {
             right: 0,
             child: SafeArea(
               child: Center(
-                child: Image.asset('assets/img/logo.png', width: 230),
+                child: Image.asset('assets/img/logo_white.png', width: 230),
               ),
             ),
           ),
@@ -31,7 +32,6 @@ class _LoginState extends State<Login> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: MediaQuery.of(context).size.height * 0.75,
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
               decoration: const BoxDecoration(
                 color: Colors.white,
@@ -42,7 +42,7 @@ class _LoginState extends State<Login> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const Text(
-                      'Masuk',
+                      'Daftar',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 30,
@@ -54,10 +54,10 @@ class _LoginState extends State<Login> {
                     const SizedBox(height: 16),
 
                     Text(
-                      'Kelola transaksi dan penjualan dengan lebih praktis.',
+                      'Daftar sekarang dan mulai gunakan SaktiPay untuk bisnismu.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 18,
                         color: Colors.black.withOpacity(0.75),
                       ),
                     ),
@@ -66,7 +66,7 @@ class _LoginState extends State<Login> {
 
                     Text(
                       'Email',
-                      style: TextStyle(fontSize: 16, color: Colors.black),
+                      style: TextStyle(fontSize: 18, color: Colors.black),
                     ),
                     const SizedBox(height: 8),
                     TextField(
@@ -89,7 +89,7 @@ class _LoginState extends State<Login> {
 
                     Text(
                       'Kata Sandi',
-                      style: TextStyle(fontSize: 16, color: Colors.black),
+                      style: TextStyle(fontSize: 18, color: Colors.black),
                     ),
                     const SizedBox(height: 8),
                     TextField(
@@ -126,6 +126,45 @@ class _LoginState extends State<Login> {
 
                     const SizedBox(height: 20),
 
+                    Text(
+                      'Konfirmasi Sandi',
+                      style: TextStyle(fontSize: 18, color: Colors.black),
+                    ),
+                    const SizedBox(height: 8),
+                    TextField(
+                      obscureText: obscureConfirm,
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black.withOpacity(0.25),
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        hintText: 'Konfirmasi Sandi',
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            obscureConfirm
+                                ? Icons.visibility_off
+                                : Icons.visibility,
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              obscureConfirm = !obscureConfirm;
+                            });
+                          },
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    ),
+
+                    const SizedBox(height: 20),
+
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
@@ -143,7 +182,7 @@ class _LoginState extends State<Login> {
                           );
                         },
                         child: const Text(
-                          'Masuk',
+                          'Daftar',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -186,7 +225,6 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-
                     const SizedBox(height: 40),
                   ],
                 ),

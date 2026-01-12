@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:saktipay/splash/splash_screen.dart';
+import 'package:saktipay/pages/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:saktipay/onboarding/third_onboarding.dart';
+import 'package:saktipay/pages/onboarding/third_onboarding.dart';
 
 class SecondOnBoarding extends StatelessWidget {
   const SecondOnBoarding({super.key});
@@ -28,7 +28,7 @@ class SecondOnBoarding extends StatelessWidget {
                   },
                   child: Text(
                     'Lewati',
-                    style: TextStyle(fontSize: 16, color: Color(0xFFA4A4A4)),
+                    style: TextStyle(fontSize: 18, color: Color(0xFFA4A4A4)),
                   ),
                 ),
               ),
@@ -65,7 +65,7 @@ class SecondOnBoarding extends StatelessWidget {
                 'Nikmati proses transaksi yang lancar tanpa lemot.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
                   color: Colors.black.withOpacity(0.75),
                 ),
               ),

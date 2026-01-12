@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:saktipay/onboarding/first_onboarding.dart';
+import 'package:saktipay/pages/onboarding/first_onboarding.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -29,7 +29,11 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 50),
-          child: Image.asset('assets/img/logo.png', width: 250, height: 100),
+          child: Image.asset(
+            'assets/img/logo_white.png',
+            width: 250,
+            height: 100,
+          ),
         ),
       ),
     );
