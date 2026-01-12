@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:saktipay/pages/auth/login.dart';
 
 class Register extends StatefulWidget {
@@ -107,10 +108,12 @@ class _RegisterState extends State<Register> {
                         ),
                         hintText: 'Kata Sandi',
                         suffixIcon: IconButton(
-                          icon: Icon(
+                          icon: SvgPicture.asset(
                             obscurePassword
-                                ? Icons.visibility_off
-                                : Icons.visibility,
+                                ? 'assets/icons/eye-off.svg'
+                                : 'assets/icons/eye.svg',
+                            width: 20,
+                            height: 20,
                           ),
                           onPressed: () {
                             setState(() {
@@ -146,10 +149,12 @@ class _RegisterState extends State<Register> {
                         ),
                         hintText: 'Konfirmasi Sandi',
                         suffixIcon: IconButton(
-                          icon: Icon(
+                          icon: SvgPicture.asset(
                             obscureConfirm
-                                ? Icons.visibility_off
-                                : Icons.visibility,
+                                ? 'assets/icons/eye-off.svg'
+                                : 'assets/icons/eye.svg',
+                            width: 20,
+                            height: 20,
                           ),
                           onPressed: () {
                             setState(() {

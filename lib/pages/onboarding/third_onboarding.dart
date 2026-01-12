@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:saktipay/pages/auth/register.dart';
 
 class ThirdOnBoarding extends StatelessWidget {
@@ -34,8 +35,8 @@ class ThirdOnBoarding extends StatelessWidget {
 
             const Spacer(),
 
-            Image.asset(
-              'assets/img/undraw_mobile_encryption.png',
+            SvgPicture.asset(
+              'assets/img/undraw_mobile_encryption.svg',
               width: 300,
               height: 200,
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:saktipay/pages/onboarding/second_onboarding.dart';
 
 class FirstOnBoarding extends StatelessWidget {
@@ -36,8 +37,8 @@ class FirstOnBoarding extends StatelessWidget {
 
             const Spacer(),
 
-            Image.asset(
-              'assets/img/undraw_report.png',
+            SvgPicture.asset(
+              'assets/img/undraw_report.svg',
               width: 300,
               height: 200,
             ),
