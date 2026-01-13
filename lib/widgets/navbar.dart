@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class BottomBar extends StatelessWidget {
+class Navbar extends StatelessWidget {
   final int currentIndex;
-  final Function(int) onTap;
+  final ValueChanged<int> onTap;
 
-  const BottomBar({
-    super.key,
-    required this.currentIndex,
-    required this.onTap,
-    required int currentProduct,
-  });
+  const Navbar({super.key, required this.currentIndex, required this.onTap});
 
   Color _color(int index) {
     return currentIndex == index ? const Color(0xFFF9B42A) : Colors.grey;
@@ -22,8 +17,13 @@ class BottomBar extends StatelessWidget {
       currentIndex: currentIndex,
       onTap: onTap,
       type: BottomNavigationBarType.fixed,
+
       selectedItemColor: const Color(0xFFF9B42A),
       unselectedItemColor: Colors.grey,
+
+      selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
+      unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.normal),
+
       items: [
         BottomNavigationBarItem(
           icon: SvgPicture.asset(

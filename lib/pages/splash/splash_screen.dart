@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+
 import 'package:saktipay/pages/onboarding/first_onboarding.dart';
 
 class SplashScreen extends StatefulWidget {

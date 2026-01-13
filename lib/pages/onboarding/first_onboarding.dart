@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:saktipay/pages/onboarding/second_onboarding.dart';
 
 class FirstOnBoarding extends StatelessWidget {
